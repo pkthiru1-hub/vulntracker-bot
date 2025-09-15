@@ -29,6 +29,90 @@ export type Database = {
         }
         Relationships: []
       }
+      chat_sessions: {
+        Row: {
+          created_at: string | null
+          id: string
+          message: string
+          response: string
+          session_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          message: string
+          response: string
+          session_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          message?: string
+          response?: string
+          session_id?: string
+        }
+        Relationships: []
+      }
+      vulnerabilities: {
+        Row: {
+          affected_products: string[] | null
+          created_at: string | null
+          cve_id: string
+          cvss_score: number | null
+          cwe_ids: string[] | null
+          description: string
+          id: string
+          modified_date: string | null
+          published_date: string
+          reference_urls: string[] | null
+          severity: string
+          source: string
+          source_url: string | null
+          tags: string[] | null
+          title: string
+          updated_at: string | null
+          vendor: string | null
+        }
+        Insert: {
+          affected_products?: string[] | null
+          created_at?: string | null
+          cve_id: string
+          cvss_score?: number | null
+          cwe_ids?: string[] | null
+          description: string
+          id?: string
+          modified_date?: string | null
+          published_date: string
+          reference_urls?: string[] | null
+          severity: string
+          source: string
+          source_url?: string | null
+          tags?: string[] | null
+          title: string
+          updated_at?: string | null
+          vendor?: string | null
+        }
+        Update: {
+          affected_products?: string[] | null
+          created_at?: string | null
+          cve_id?: string
+          cvss_score?: number | null
+          cwe_ids?: string[] | null
+          description?: string
+          id?: string
+          modified_date?: string | null
+          published_date?: string
+          reference_urls?: string[] | null
+          severity?: string
+          source?: string
+          source_url?: string | null
+          tags?: string[] | null
+          title?: string
+          updated_at?: string | null
+          vendor?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
